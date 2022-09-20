@@ -1,16 +1,14 @@
-#sudo su
+ curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl$ chmod +x ./kubectl$ sudo mv ./kubectl /usr/local/bin/kubectl
 
-#Now install docker
 
-sudo apt update && apt -y install docker.io
+sudo apt-get update && \
+    sudo apt-get install docker.io -y
 
-#install Kubectl
 
-curl -LO https://storage.googleapis.com/kubern... -s https://storage.googleapis.com/kubern... && chmod +x ./kubectl && sudo mv ./kubectl /usr/local/bin/kubectl
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
 
-#install Minikube
+minikube version
 
-curl -Lo minikube https://storage.googleapis.com/miniku... && chmod +x minikube && sudo mv minikube /usr/local/bin/
+sudo apt install conntrack
 
-apt install conntrack
 minikube start --vm-driver=none
