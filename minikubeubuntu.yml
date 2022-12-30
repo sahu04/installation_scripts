@@ -1,0 +1,7 @@
+wget -O /tmp/minikube_latest.deb https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.de
+ sudo apt install /tmp/minikube_latest.deb
+
+minikube -version
+
+sudo snap install kubectl --classic
+minikube start --driver=docker
